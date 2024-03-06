@@ -5,11 +5,22 @@ import './RankedData.css'; // Import the CSS file
 const RankedData = () => {
     const [data, setData] = useState([]);
 
+    // useEffect(() => {
+    //     fetch("http://localhost:5000/api/olx")
+    //         .then(res => res.json())
+    //         .then(info => setData(info));
+    //         // fetch({url})
+    // }, []);
     useEffect(() => {
-        fetch("http://localhost:8080/api/olx")
-            .then(res => res.json())
-            .then(info => setData(info));
+        async function fetchData(){ 
+            const result=await fetch("http://localhost:5000/api/olx");
+            const body= await result.json();
+            setData(body);
+    }
+    fetchData();
     }, []);
+
+
 
     return (
         <div className="ranked-data">

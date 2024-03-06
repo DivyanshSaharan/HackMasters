@@ -2,8 +2,10 @@ from flask import Flask, jsonify
 import pandas as pd
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def scrape_olx():
     url = "https://www.olx.in/scooters_c1413"
@@ -81,3 +83,5 @@ def get_data():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    # http://127.0.0.1:5000/api/olx
