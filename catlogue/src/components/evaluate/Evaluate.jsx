@@ -5,11 +5,12 @@ import RankedData from '../RankedData/RankedData';
 
 const Evaluate = () => {
     const {id}=useParams();
+    console.log(id);
   return (
     <div className='evaluate-content'>
         <h1 className="gradient__text">Catalog Scoring</h1>
         <p>{id}</p>
-        <RankedData/>
+        <RankedData id={id}/>
     </div>
   )
 }

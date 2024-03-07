@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import './RankedData.css'; // Import the CSS file
 
-const RankedData = () => {
+const RankedData = ({id}) => {
+    console.log("RankedData"+id);
     const [data, setData] = useState([]);
 
     // useEffect(() => {
@@ -13,7 +14,7 @@ const RankedData = () => {
     // }, []);
     useEffect(() => {
         async function fetchData(){ 
-            const result=await fetch("http://localhost:5000/api/olx");
+            const result=await fetch(`http://localhost:5000/api/${id}`);
             const body= await result.json();
             setData(body);
     }
