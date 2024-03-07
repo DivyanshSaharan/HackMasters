@@ -14,7 +14,7 @@ React,Javascript, HTML, CSS, EJS, NodeJS, Express
 
 ## Screenshots
 
-[App Screenshot](https://drive.google.com/drive/folders/1ztBXVEYSQeW7dyZhBxFS_U_j6LpJF3R7/1.jpeg)
+[App Screenshot](https://drive.google.com/drive/folders/1ztBXVEYSQeW7dyZhBxFS_U_j6LpJF3R7)
 
 
 ## Authors
